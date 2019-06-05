@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "TaskForm";
+}
+
+<h2>TaskForm</h2>
+
+<h2>Add a new Task Here!</h2>
+
+<form action="../UserTask/AddTask" method="post">
+    
+    <input type="text" name="Description" placeholder="Description" />
+    <input type="date" name="DueDate" placeholder="YYYY-MM-DD" />
+    <input type="hidden" name="Status" value="False" />
+
+    <input type="submit" value="Add new Task!" class="btn-success" />
+</form>
+
+<p class="danger">@ViewBag.ErrorMessage</p>
